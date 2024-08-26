@@ -37,5 +37,3 @@ app.listen(PORT, () => {
   MongoDB_connection();
   console.log(`server listening on port ${PORT}`);
 });
-
-export { app };
