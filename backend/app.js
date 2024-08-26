@@ -20,7 +20,7 @@ const app = express();
 
 dotenv.config();
 const corsOptions = {
-  origin: ["https://portfolio-5yi4.onrender.com"],
+  origin: ["https://my-portfolio-api-nu.vercel.app"],
   methods: ["POST", "GET"],
   credentials: true,
 };
