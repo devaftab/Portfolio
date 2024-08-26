@@ -6,6 +6,22 @@ import MongoDB_connection from "./DB/MondoDB_conection.js";
 import contactRoute from "./routes/contactRoute.js";
 // import path from "path";
 // import { fileURLToPath } from "url";
+module.exports = (req, res) => {
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://my-portfolio-1k7cxgcsq-technophile.vercel.app"
+  );
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  if (req.method === "OPTIONS") {
+    res.status(200).end();
+    return;
+  }
+
+  // Handle your POST request here
+  res.status(200).json({ message: "Success" });
+};
 
 const app = express();
 //deployement start
