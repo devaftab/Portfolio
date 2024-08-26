@@ -20,9 +20,9 @@ const app = express();
 
 dotenv.config();
 const corsOptions = {
-  origin: "https://my-portfolio-pi-five-43.vercel.app/",
+  origin: true,
   methods: ["POST", "GET"],
-  // credentials: true,
+  credentials: true,
 };
 app.use(cors(corsOptions));
 
@@ -32,7 +32,6 @@ app.use(bodyParser.json());
 const PORT = process.env.port || 5000;
 
 app.use("/api", contactRoute);
-app.options("/api/contact", cors(corsOptions));
 
 app.listen(PORT, () => {
   MongoDB_connection();
