@@ -20,7 +20,7 @@ const app = express();
 
 dotenv.config();
 const corsOptions = {
-  origin: true,
+  origin: "https://my-portfolio-2aprs2216-technophile.vercel.app/",
   methods: ["POST", "GET"],
   credentials: true,
 };
