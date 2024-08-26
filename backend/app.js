@@ -20,7 +20,8 @@ const app = express();
 
 dotenv.config();
 const corsOptions = {
-  origin: true,
+  origin: ["https://portfolio-5yi4.onrender.com"],
+  methods: ["POST", "GET"],
   credentials: true,
 };
 app.use(cors(corsOptions));

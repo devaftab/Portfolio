@@ -22,7 +22,7 @@ function Contact() {
         }
 
         try {
-            const response = await axios.post("http://localhost:5000/api/contact", { name, email, message });
+            const response = await axios.post("https://portfolio-5yi4.onrender.com/api/contact", { name, email, message });
             setModalMessage(response.data.message);
             setIsModalOpen(true);
             setName('');
