@@ -21,7 +21,7 @@ const app = express();
 dotenv.config();
 const corsOptions = {
   origin: true,
-  methods: "POST",
+  methods: ["POST", "GET"],
   credentials: true,
 };
 app.use(cors(corsOptions));
