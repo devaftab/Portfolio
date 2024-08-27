@@ -35,5 +35,5 @@ app.use("/api", contactRoute);
 
 app.listen(PORT, () => {
   MongoDB_connection();
-  console.log(`server listening on port ${PORT}`);
+  console.log(`Server listening on the port ${PORT}`);
 });
