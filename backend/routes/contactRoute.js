@@ -12,39 +12,39 @@ contactRoute.post("/contact", async (req, res) => {
       return res.status(400).json({ message: "Please fill out all fields" });
     }
     //save message to database
-    const newContact = new Contact({ name, email, message });
-    await newContact.save();
+    // const newContact = new Contact({ name, email, message });
+    // await newContact.save();
 
-    // transporter object using SMTP
-    const transporter = nodemailer.createTransport({
-      service: "Gmail",
-      auth: {
-        user: process.env.USER_EMAIL,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+    // // transporter object using SMTP
+    // const transporter = nodemailer.createTransport({
+    //   service: "Gmail",
+    //   auth: {
+    //     user: process.env.USER_EMAIL,
+    //     pass: process.env.EMAIL_PASS,
+    //   },
+    // });
 
-    const mailOptions = {
-      from: email,
-      to: process.env.RECEIVER_EMAIL,
-      subject: `Message from ${name} (devaftab)`,
-      text: message,
-      html: `
-        <h3>Client Details</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong> ${message}</p>
-      `,
-    };
+    // const mailOptions = {
+    //   from: email,
+    //   to: process.env.RECEIVER_EMAIL,
+    //   subject: `Message from ${name} (devaftab)`,
+    //   text: message,
+    //   html: `
+    //     <h3>Client Details</h3>
+    //     <p><strong>Name:</strong> ${name}</p>
+    //     <p><strong>Email:</strong> ${email}</p>
+    //     <p><strong>Message:</strong> ${message}</p>
+    //   `,
+    // };
 
-    // Send email
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.log("Error occurred:", error.message);
-      } else {
-        console.log("Email sent:", info.response);
-      }
-    });
+    // // Send email
+    // transporter.sendMail(mailOptions, (error, info) => {
+    //   if (error) {
+    //     console.log("Error occurred:", error.message);
+    //   } else {
+    //     console.log("Email sent:", info.response);
+    //   }
+    // });
 
     res.status(200).json({
       message: "Message sent successfully. We will get back to you shortly",
