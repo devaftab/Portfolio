@@ -22,7 +22,7 @@ function Contact() {
         }
 
         try {
-            const response = await axios.post("https://my-portfolio-api-nu.vercel.app/api/contact", { name, email, message });
+            const response = await axios.post("/api/contact", { name, email, message });
             setModalMessage(response.data.message);
             setIsModalOpen(true);
             setName('');
