@@ -45,11 +45,11 @@ function Contact() {
 
     return (
         <section className="contact" id="contact">
-            <div className="heading">
+            <div className="heading block">
                 <h2>Contact</h2>
                 <span>Connect me</span>
             </div>
-            <div className="contact-form">
+            <div className="contact-form block">
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"

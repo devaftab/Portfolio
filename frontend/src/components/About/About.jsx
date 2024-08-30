@@ -3,11 +3,11 @@ import "./About.css";
 function About() {
     return (
         <section className="about" id="about">
-            <div className="heading">
+            <div className="heading block">
                 <h2>About Me</h2>
                 <span>Introduction</span>
             </div>
-            <div className="about-container">
+            <div className="about-container block">
                 <div className="about-img">
                     <img src="/img/121.jpg" alt="About" />
                 </div>
