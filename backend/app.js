@@ -19,15 +19,14 @@ const app = express();
 //deployement end
 
 dotenv.config();
+app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 const corsOptions = {
   origin: [""],
   methods: ["POST", "GET"],
   credentials: true,
 };
 app.use(cors(corsOptions));
-
-app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.json());
 
 const PORT = process.env.port || 5000;
 
