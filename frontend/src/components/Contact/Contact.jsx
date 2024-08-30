@@ -13,6 +13,8 @@ function Contact() {
 
     const [errors, setErrors] = useState({}); //for modalbox
 
+    axios.defaults.withCredentials = true;
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const newErrors = validate(name, email, message);
