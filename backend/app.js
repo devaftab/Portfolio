@@ -20,7 +20,7 @@ const app = express();
 
 dotenv.config();
 const corsOptions = {
-  origin: true,
+  origin: [""],
   methods: ["POST", "GET"],
   credentials: true,
 };
