@@ -112,6 +112,7 @@ body {
   }
   .home {
     grid-template-columns: 0.5fr 3fr;
+    text-align: center;
   }
   .home-text {
     grid-column: 1/3;
