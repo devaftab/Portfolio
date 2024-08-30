@@ -38,7 +38,7 @@ contactRoute.post("/contact", async (req, res) => {
     };
 
     // Send email
-    await transporter.sendMail(mailOptions, (error, info) => {
+    transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         console.log("Error occurred:", error.message);
       } else {
