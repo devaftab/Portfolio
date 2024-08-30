@@ -1,5 +1,4 @@
 import express from "express";
-import Contact from "../models/contactModal.js";
 import nodemailer from "nodemailer";
 
 const contactRoute = express.Router();
@@ -11,11 +10,8 @@ contactRoute.post("/contact", async (req, res) => {
     if (!name || !email || !message) {
       return res.status(400).json({ message: "Please fill out all fields" });
     }
-    //save message to database
-    const newContact = new Contact({ name, email, message });
-    await newContact.save();
 
-    // transporter object using SMTP
+    //transporter object using SMTP
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
@@ -41,16 +37,19 @@ contactRoute.post("/contact", async (req, res) => {
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         console.log("Error occurred:", error.message);
+        return res.status(500).json({
+          message: "Failed to send the message, please try again later.",
+        });
       } else {
         console.log("Email sent:", info.response);
+        return res.status(200).json({
+          message:
+            "Message sent successfully. We will get back to you shortly.",
+        });
       }
     });
-
-    res.status(200).json({
-      message: "Message sent successfully. We will get back to you shortly",
-    });
   } catch (error) {
-    console.error("Error saving contact:", error.message);
+    console.error("Error:", error.message);
     res.status(500).json({ message: "Server error, try again later." });
   }
 });
