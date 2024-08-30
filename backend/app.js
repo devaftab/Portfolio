@@ -22,7 +22,7 @@ dotenv.config();
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 const corsOptions = {
-  origin: ["https://portfolio.devaftab.xyz"],
+  origin: true,
   methods: ["POST", "GET"],
   credentials: true,
 };
