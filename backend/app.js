@@ -29,10 +29,6 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 const PORT = process.env.port || 5000;
-
-app.get("/test", (req, res) => {
-  res.send("Hello World!");
-});
 app.use("/api", contactRoute);
 
 app.listen(PORT, () => {

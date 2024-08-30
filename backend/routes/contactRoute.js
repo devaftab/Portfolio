@@ -12,8 +12,8 @@ contactRoute.post("/contact", async (req, res) => {
       return res.status(400).json({ message: "Please fill out all fields" });
     }
     //save message to database
-    // const newContact = new Contact({ name, email, message });
-    // await newContact.save();
+    const newContact = new Contact({ name, email, message });
+    await newContact.save();
 
     // transporter object using SMTP
     const transporter = nodemailer.createTransport({
