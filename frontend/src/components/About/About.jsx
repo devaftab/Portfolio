@@ -31,7 +31,7 @@ function About() {
                             <span>web.dev.aftab@gmail.com</span>
                         </div>
                     </div>
-                    <a href="https://drive.google.com/file/d/1fA7b9mgGmdnkGrgDICG_g03caV7SAeRY/view?usp=sharing" target="_blank" className="btn">Download CV</a>
+                    <a href="https://drive.google.com/file/d/1fA7b9mgGmdnkGrgDICG_g03caV7SAeRY/view?usp=sharing" target="_blank" className="btn cv-btn">Download CV</a>
                 </div>
             </div>
         </section>
