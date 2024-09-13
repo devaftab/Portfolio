@@ -11,6 +11,10 @@ function Navbar() {
         const navbar = document.querySelector('.navbar');
         const darkmode = document.querySelector('#darkmode');
 
+        window.onload = () => {
+            document.body.classList.add('active');
+        }
+
         const handleScroll = () => {
             header.classList.toggle('shadow', window.scrollY > 0);
             navbar.classList.remove('active');
@@ -19,11 +23,11 @@ function Navbar() {
             navbar.classList.toggle('active');
         };
         const handleDarkModeToggle = () => {
-            if (darkmode.classList.contains('bx-moon')) {
-                darkmode.classList.replace('bx-moon', 'bx-sun');
+            if (darkmode.classList.contains('bx-sun')) {
+                darkmode.classList.replace('bx-sun', 'bx-moon');
                 document.body.classList.add('active');
             } else {
-                darkmode.classList.replace('bx-sun', 'bx-moon');
+                darkmode.classList.replace('bx-moon', 'bx-sun');
                 document.body.classList.remove('active');
             }
         };
