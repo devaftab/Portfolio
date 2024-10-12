@@ -49,6 +49,18 @@ function Skills() {
                     <img src="/img/icons/hacker.png" alt="hacker" className="skill-icon" />
                     <h3>Bug Bounty</h3>
                 </div>
+                <div className="skill-card block">
+                    <img src="/img/icons/docker.png" alt="docker" className="skill-icon" />
+                    <h3>Docker</h3>
+                </div>
+                <div className="skill-card block">
+                    <img src="/img/icons/gcp.png" alt="gcp" className="skill-icon" />
+                    <h3>Google Cloud</h3>
+                </div>
+                <div className="skill-card block">
+                    <img src="/img/icons/aws.png" alt="aws" className="skill-icon" />
+                    <h3>Amazon Web Services</h3>
+                </div>
             </div>
         </section>
     );
