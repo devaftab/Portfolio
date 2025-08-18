@@ -14,8 +14,8 @@ function About() {
                 <div className="about-text">
                     <p>
                         Hi there, <br />
-                        This is Mohd Aftab, technophile. I am pursuing my B.Tech in Computer Science And Engineering from USICT Delhi.<br />
-                        I am a rapid learner focused on my goal. I always try new technologies to add to my skills.
+                        This is Mohd Aftab, technophile. I have completed B.Tech in Computer Science And Engineering from USICT Delhi in 2025.<br />
+                        I am a rapid learner focused on my goal. I always try new technologies to add, to my skills.
                     </p>
                     <div className="information">
                         <div className="info-box">
@@ -31,7 +31,7 @@ function About() {
                             <span>web.dev.aftab@gmail.com</span>
                         </div>
                     </div>
-                    <a href="https://drive.google.com/file/d/1ynOyhCmfZisCEx26XTiV1yz1G0kzMxKA/view?usp=sharing" target="_blank" className="btn cv-btn">Download CV</a>
+                    <a href="https://drive.google.com/file/d/1mthOo-7AUhLf7N1ioWenfviDtZWojV7p/view?usp=sharing" target="_blank" className="btn cv-btn">Download CV</a>
                 </div>
             </div>
         </section>
