@@ -1,5 +1,5 @@
 # Aftab's Portfolio Website
-You can visit the live website here: [Technophile](https://devaftab.xyz/)
+You can visit the live website here: [Technophile](https://devaftab.vercel.app/)
 
 ## Overview
 
